@@ -1,8 +1,9 @@
+import logo from "../src/logo.png";
 const Header = () => {
   return (
     <div className="header">
       <div className="logo-container">
-        <img className="logo" src="../src/logo.png" />
+        <img className="logo" src={logo} />
       </div>
       <div className="nav-items">
         <ul>
