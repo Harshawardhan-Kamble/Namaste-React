@@ -6,9 +6,9 @@ import Footer from "./Components/Footer";
 const App = () => {
   return (
     <React.Fragment>
-      <Header></Header>
-      {/* <Body></Body>
-      <Footer></Footer> */}
+      <Header />
+      <Body />
+      <Footer />
     </React.Fragment>
   );
 };

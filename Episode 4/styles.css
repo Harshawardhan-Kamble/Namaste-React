@@ -28,3 +28,39 @@
     padding: 10px;
     margin: 10px;
 }
+
+.res-container {
+    /* height: 100vh; */
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.res-card {
+    border-radius: 5px;
+    width: 180px;
+    height: 220px;
+    padding: 10px;
+    margin: 10px;
+    background-color: #f0f0f0;
+}
+
+.res-card:hover {
+    border: 1px solid #000;
+    cursor: pointer;
+}
+
+.search {
+    padding: 10px;
+}
+
+.res-logo {
+    width: 170px;
+    height: 130px;
+}
+
+.footer {
+    border: 1px solid black;
+    text-align: center;
+    padding: 10pxs;
+    margin-bottom: 0px;
+}
