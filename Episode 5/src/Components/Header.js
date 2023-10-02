@@ -1,4 +1,4 @@
-import logo from "../src/logo.png";
+import logo from "../utils/logo.png";
 const Header = () => {
   return (
     <div className="header">
