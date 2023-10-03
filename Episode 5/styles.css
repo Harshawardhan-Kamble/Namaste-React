@@ -58,6 +58,16 @@
     height: 130px;
 }
 
+
+.filter {
+    margin: 10px;
+}
+
+.filter-btn {
+    padding: 5px;
+    margin-left: 20px;
+}
+
 .footer {
     border: 1px solid black;
     text-align: center;
