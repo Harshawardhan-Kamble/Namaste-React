@@ -4,10 +4,12 @@ import { CDN_IMAGE } from "../utils/constant";
 
 const RestaurantList = ({ showTopRated }) => {
   const filteredRestaurant = showTopRated
-    ? restaurantList.filter((data) => data.info.avgRating >= 4.5)
+    ? restaurantList.filter((data) => data.info.avgRating >= 4)
     : restaurantList;
+
   return (
     <>
+      {/* {showTopRated && <div>&times;</div>} */}
       {filteredRestaurant.map((restaurant) => (
         <RestuarantCard
           key={restaurant.info.id}

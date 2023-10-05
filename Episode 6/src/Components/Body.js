@@ -10,7 +10,7 @@ const Body = () => {
       {/* <div className="search">Search</div> */}
       <div className="filter">
         <button className="filter-btn" onClick={topRated}>
-          Top Rated Restaurants
+          Rating 4.0+
         </button>
       </div>
       <div className="res-container">
