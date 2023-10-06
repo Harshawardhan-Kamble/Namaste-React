@@ -12,7 +12,7 @@
 .nav-items>ul {
     display: flex;
     list-style-type: none;
-    font-size: 24px;
+    font-size: 14px;
 }
 
 .logo {
@@ -73,4 +73,22 @@
     text-align: center;
     padding: 10pxs;
     margin-bottom: 0px;
+}
+.shimmer-Container{
+    display: flex;;
+    flex-wrap: wrap;
+}
+.shimmer-card{
+    background-color:#f0f0f0;
+    width:150px ;
+    height:180px;
+    margin:20px
+}
+.login-btn{
+    cursor: pointer;
+    border-radius: 12px;
+    height: 35px;
+    margin: 9px 20px;
+    padding: 5px;
+    width: 57px;
 }
