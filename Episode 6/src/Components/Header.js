@@ -3,11 +3,7 @@ import { useState } from "react";
 const Header = () => {
   const [log, setLog] = useState("Login");
   const toggleLog = () => {
-    if (log == "Login") {
-      setLog("Logout");
-    } else {
-      setLog("Login");
-    }
+    setLog(log === "Login" ? "Logout" : "Login");
   };
   return (
     <div className="header">
@@ -20,9 +16,11 @@ const Header = () => {
           <li>About</li>
           <li>Contact us</li>
           <li>Cart</li>
-          <button className="login-btn" onClick={toggleLog}>
-            {log}
-          </button>
+          <li>
+            <button className="log-btn" onClick={toggleLog}>
+              {log}
+            </button>
+          </li>
         </ul>
       </div>
     </div>
