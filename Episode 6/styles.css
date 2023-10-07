@@ -51,6 +51,7 @@
 
 .search {
     padding: 10px;
+    margin: 10px;
 }
 
 .res-logo {
@@ -61,12 +62,15 @@
 
 .filter {
     margin: 10px;
+    display: flex;
 }
 
 .filter-btn {
-    padding: 5px;
-    margin-left: 20px;
+    height: 26px;
+  margin-top: 21px;
+  padding: 5px;
 }
+
 
 .footer {
     border: 1px solid black;
@@ -91,4 +95,15 @@
     margin-top:-7px ;
     padding: 5px;
     width: 57px;
+}
+.search-input{
+    border-radius: 5px;
+  /* margin: 3px; */
+  padding: 4px;
+  width: 23vw;
+}
+
+.search-button{
+    margin-left: 14px;
+  padding: 4px;
 }
