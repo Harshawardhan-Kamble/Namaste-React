@@ -67,8 +67,8 @@
 
 .filter-btn {
     height: 26px;
-  margin-top: 21px;
-  padding: 5px;
+    margin-top: 21px;
+    padding: 5px;
 }
 
 
@@ -78,32 +78,37 @@
     padding: 10pxs;
     margin-bottom: 0px;
 }
-.shimmer-Container{
-    display: flex;;
+
+.shimmer-Container {
+    display: flex;
+    ;
     flex-wrap: wrap;
 }
-.shimmer-card{
-    background-color:#f0f0f0;
-    width:150px ;
-    height:180px;
-    margin:20px
+
+.shimmer-card {
+    background-color: #f0f0f0;
+    width: 150px;
+    height: 180px;
+    margin: 20px
 }
-.log-btn{
+
+.log-btn {
     cursor: pointer;
     border-radius: 12px;
     /* height: 35px; */
-    margin-top:-7px ;
+    margin-top: -7px;
     padding: 5px;
     width: 57px;
 }
-.search-input{
+
+.search-input {
     border-radius: 5px;
-  /* margin: 3px; */
-  padding: 4px;
-  width: 23vw;
+    /* margin: 3px; */
+    padding: 4px;
+    width: 23vw;
 }
 
-.search-button{
+.search-button {
     margin-left: 14px;
-  padding: 4px;
+    padding: 4px;
 }

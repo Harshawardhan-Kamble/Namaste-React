@@ -1,15 +1,11 @@
 import logo from "../../assets/logo.png";
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 const Header = () => {
   const [log, setLog] = useState("Login");
   const toggleLog = () => {
     setLog(log === "Login" ? "Logout" : "Login");
   };
-  console.log("header Render");
-  // When will this useEffect called
-  useEffect(() => {
-    console.log("Use Effect called");
-  }, []);
   return (
     <div className="header">
       <div className="logo-container">
@@ -17,9 +13,15 @@ const Header = () => {
       </div>
       <div className="nav-items">
         <ul>
-          <li>Home</li>
-          <li>About</li>
-          <li>Contact us</li>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/about">About</Link>
+          </li>
+          <li>
+            <Link to="/contactus">Contact us</Link>
+          </li>
           <li>Cart</li>
           <li>
             <button className="log-btn" onClick={toggleLog}>
