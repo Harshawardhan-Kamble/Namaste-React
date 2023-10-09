@@ -1,23 +1,9 @@
 const Shimmer = () => {
-  return (
-    <div className="shimmer-Container">
-      <div className="shimmer-card"></div>
-      <div className="shimmer-card"></div>
-      <div className="shimmer-card"></div>
-      <div className="shimmer-card"></div>
-      <div className="shimmer-card"></div>
-      <div className="shimmer-card"></div>
-      <div className="shimmer-card"></div>
-      <div className="shimmer-card"></div>
-      <div className="shimmer-card"></div>
-      <div className="shimmer-card"></div>
-      <div className="shimmer-card"></div>
-      <div className="shimmer-card"></div>
-      <div className="shimmer-card"></div>
-      <div className="shimmer-card"></div>
-      <div className="shimmer-card"></div>
-      <div className="shimmer-card"></div>
-    </div>
-  );
+  const shimmerCards = Array(16)
+    .fill(null)
+    .map((_, index) => <div className="shimmer-card" key={index}></div>);
+
+  return <div className="shimmer-Container">{shimmerCards}</div>;
 };
+
 export default Shimmer;
