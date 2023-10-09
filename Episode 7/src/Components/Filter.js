@@ -1,21 +1,25 @@
-import { useState } from "react";
-const Filter = ({ resList, setResList }) => {
-  const [showTopRated, setShowTopRated] = useState();
-  const topRated = () => {
-    setShowTopRated(true);
-  };
-  const filteredRating = showTopRated
-    ? resList.filter((data) => data.info.avgRating >= 4)
-    : resList;
-  setResList(filteredRating);
-  console.log(resList);
-  console.log(filteredRating);
+const Filter = ({ searchText, setSearchText, handlerOnClick, topRated }) => {
   return (
-    <>
+    <div className="filter">
+      <div className="search">
+        <input
+          className="search-input"
+          type="text"
+          placeholder="Search for restaurants"
+          value={searchText}
+          onChange={(e) => {
+            setSearchText(e.target.value);
+          }}
+        />
+        <button className="search-button" onClick={handlerOnClick}>
+          Search
+        </button>
+      </div>
       <button className="filter-btn" onClick={topRated}>
-        Rating 4.0+
+        Rating 4.5 +
       </button>
-    </>
+    </div>
   );
 };
+
 export default Filter;

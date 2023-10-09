@@ -2,6 +2,7 @@ import RestuarantCard from "./RestaurantCard";
 import { CDN_IMAGE } from "../utils/constant";
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
+import Filter from "./Filter";
 const RestaurantList = () => {
   const [resList, setResList] = useState([]);
   const [filterList, setFilterList] = useState([]);
@@ -37,7 +38,7 @@ const RestaurantList = () => {
 
   useEffect(() => {
     const filteredRating = showTopRated
-      ? resList.filter((data) => data.info.avgRating >= 4)
+      ? resList.filter((data) => data.info.avgRating >= 4.5)
       : resList;
     setFilterList(filteredRating);
   }, [showTopRated, resList]);
@@ -46,25 +47,12 @@ const RestaurantList = () => {
     <Shimmer />
   ) : (
     <>
-      <div className="filter">
-        <div className="search">
-          <input
-            className="search-input"
-            type="text"
-            placeholder="Search for restaurants"
-            value={searchText}
-            onChange={(e) => {
-              setSearchText(e.target.value);
-            }}
-          />
-          <button className="search-button" onClick={handlerOnClick}>
-            Search
-          </button>
-        </div>
-        <button className="filter-btn" onClick={topRated}>
-          Rating 4.0+
-        </button>
-      </div>
+      <Filter
+        searchText={searchText}
+        setSearchText={setSearchText}
+        handlerOnClick={handlerOnClick}
+        topRated={topRated}
+      />
       <div className="res-container">
         {filterList.map((restaurant) => (
           <RestuarantCard

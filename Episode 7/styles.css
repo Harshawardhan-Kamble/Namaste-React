@@ -112,3 +112,12 @@
     margin-left: 14px;
     padding: 4px;
 }
+
+ul a {
+    text-decoration: none;
+    color: black
+}
+
+a:hover {
+    border: 2px solid orange;
+}
