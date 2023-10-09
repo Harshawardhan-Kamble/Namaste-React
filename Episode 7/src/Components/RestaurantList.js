@@ -6,14 +6,10 @@ const RestaurantList = () => {
   const [resList, setResList] = useState([]);
   const [filterList, setFilterList] = useState([]);
   const [searchText, setSearchText] = useState("");
-  console.log("rendered");
-  // const [showTopRated, setShowTopRated] = useState();
-  // const topRated = () => {
-  //   setShowTopRated(true);
-  // };
-  // const filteredRating = showTopRated? resList.filter((data) => data.info.avgRating >= 4)
-  //   : resList;
-  // setResList(filteredRating);
+  const [showTopRated, setShowTopRated] = useState(false);
+  const topRated = () => {
+    setShowTopRated(true);
+  };
   const handlerOnClick = () => {
     console.log(searchText);
     const filteredText = resList.filter((res) =>
@@ -39,6 +35,13 @@ const RestaurantList = () => {
     fetchData();
   }, []);
 
+  useEffect(() => {
+    const filteredRating = showTopRated
+      ? resList.filter((data) => data.info.avgRating >= 4)
+      : resList;
+    setFilterList(filteredRating);
+  }, [showTopRated, resList]);
+
   return resList.length === 0 ? (
     <Shimmer />
   ) : (
@@ -58,7 +61,9 @@ const RestaurantList = () => {
             Search
           </button>
         </div>
-        <button className="filter-btn">Rating 4.0+</button>
+        <button className="filter-btn" onClick={topRated}>
+          Rating 4.0+
+        </button>
       </div>
       <div className="res-container">
         {filterList.map((restaurant) => (
