@@ -3,6 +3,7 @@ import { CDN_IMAGE } from "../utils/constant";
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
 import Filter from "./Filter";
+import { Link } from "react-router-dom";
 const RestaurantList = () => {
   const [resList, setResList] = useState([]);
   const [filterList, setFilterList] = useState([]);
@@ -36,13 +37,13 @@ const RestaurantList = () => {
     fetchData();
   }, []);
 
+  console.log(filterList);
   useEffect(() => {
     const filteredRating = showTopRated
       ? resList.filter((data) => data.info.avgRating >= 4.5)
       : resList;
     setFilterList(filteredRating);
   }, [showTopRated, resList]);
-
   return resList.length === 0 ? (
     <Shimmer />
   ) : (
@@ -55,15 +56,19 @@ const RestaurantList = () => {
       />
       <div className="res-container">
         {filterList.map((restaurant) => (
-          <RestuarantCard
+          <Link
+            to={"/restaurant/" + restaurant?.info?.id}
             key={restaurant.info.id}
-            name={restaurant.info.name}
-            cuisine={restaurant.info.cuisines}
-            rating={restaurant.info.avgRating}
-            img={CDN_IMAGE + restaurant.info.cloudinaryImageId}
-            price={restaurant.info.costForTwo}
-            delivery={restaurant.info.sla.deliveryTime + " min"}
-          />
+          >
+            <RestuarantCard
+              name={restaurant.info.name}
+              cuisine={restaurant.info.cuisines}
+              rating={restaurant.info.avgRating}
+              img={CDN_IMAGE + restaurant.info.cloudinaryImageId}
+              price={restaurant.info.costForTwo}
+              delivery={restaurant.info.sla.deliveryTime + " min"}
+            />
+          </Link>
         ))}
       </div>
     </>

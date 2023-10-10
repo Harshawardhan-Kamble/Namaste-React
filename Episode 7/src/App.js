@@ -7,6 +7,7 @@ import Footer from "./Components/Footer";
 import About from "./Components/About";
 import Error from "./Components/Error";
 import ContactUs from "./Components/ContactUs";
+import RestMenu from "./Components/RestMenu";
 const App = () => {
   return (
     <React.Fragment>
@@ -33,6 +34,10 @@ const appRouter = createBrowserRouter([
       {
         path: "/contactus",
         element: <ContactUs />,
+      },
+      {
+        path: "/restaurant/:id",
+        element: <RestMenu />,
       },
     ],
   },
