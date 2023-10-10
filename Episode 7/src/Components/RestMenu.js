@@ -8,22 +8,20 @@ const RestMenu = () => {
   useEffect(() => {
     fetchMenu();
   }, []);
-  console.log(id);
+
   const fetchMenu = async () => {
-    const data = await fetch(MENU_API + 23719);
+    const data = await fetch(MENU_API + id);
     const jsonData = await data.json();
-    console.log(jsonData);
     setResInfo(jsonData.data);
   };
 
   if (resInfo === null) return <Shimmer />;
-  console.log(resInfo);
   const { name, areaName, costForTwoMessage, cuisines, avgRating, feeDetails } =
     resInfo?.cards[0]?.card?.card?.info;
 
-  console.log(
-    resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card
-  );
+  // console.log(
+  //   resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card
+  // );
   const { itemCards } =
     resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card;
   // const { itemCard2 } =
@@ -41,9 +39,11 @@ const RestMenu = () => {
       <h2>Menu</h2>
       <h4>{itemCards[0].card.info.category}</h4>
       <ul>
-        {itemCards.map((item) => (
-          <li>
-            {item?.card?.info?.name} ₹ {item?.card?.info?.price / 100}
+        {itemCards.map((item, index) => (
+          <li key={index}>
+            {item?.card?.info?.name} ₹{" "}
+            {item?.card?.info?.price / 100 ||
+              item?.card?.info?.defaultPrice / 100}
           </li>
         ))}
       </ul>
