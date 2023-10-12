@@ -1,4 +1,4 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import Header from "./Components/Header";
@@ -8,6 +8,8 @@ import About from "./Components/About";
 import Error from "./Components/Error";
 import ContactUs from "./Components/ContactUs";
 import RestMenu from "./Components/RestMenu";
+import Shimmer from "./Components/Shimmer";
+const Grocery = lazy(() => import("./Components/Grocery"));
 const App = () => {
   return (
     <React.Fragment>
@@ -34,6 +36,14 @@ const appRouter = createBrowserRouter([
       {
         path: "/contactus",
         element: <ContactUs />,
+      },
+      {
+        path: "/grocery",
+        element: (
+          <Suspense fallback={<Shimmer />}>
+            <Grocery />
+          </Suspense>
+        ),
       },
       {
         path: "/restaurant/:id",

@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
 import Filter from "./Filter";
 import { Link } from "react-router-dom";
+import useOnlineStatus from "../utils/useOnlineStatus";
 
 const RestaurantList = () => {
   const [resList, setResList] = useState([]);
@@ -45,6 +46,9 @@ const RestaurantList = () => {
       : resList;
     setFilterList(filteredRating);
   }, [showTopRated, resList]);
+
+  const onlineStatus = useOnlineStatus();
+  if (onlineStatus === false) return <h1>Internet Disconnected</h1>;
   return resList.length === 0 ? (
     <Shimmer />
   ) : (
