@@ -5,7 +5,6 @@ import Shimmer from "./Shimmer";
 import Filter from "./Filter";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
-
 const RestaurantList = () => {
   const [resList, setResList] = useState([]);
   const [filterList, setFilterList] = useState([]);
