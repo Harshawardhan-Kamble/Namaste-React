@@ -7,26 +7,28 @@
     display: flex;
     justify-content: space-between;
     border: 1px solid black;
+    padding: 0 10px;
 }
 
 .nav-items>ul {
     display: flex;
     list-style-type: none;
-    font-size: 14px;
+    font-size: 25px;
+    margin-top: 10px;
+    gap: 25px;
+    align-items: center;
 }
 
 .logo {
-    width: 80px;
-    margin: 4px;
+    width: 10vw;
 }
 
-.nav-items {
+/* .nav-items {
     padding: 0px 20px;
-}
+} */
 
 .nav-items>ul>li {
-    padding: 10px;
-    margin: 10px;
+    margin-top: 1vw;
 }
 
 .res-container {
