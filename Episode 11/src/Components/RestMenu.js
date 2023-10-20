@@ -21,13 +21,13 @@ const RestMenu = () => {
   console.log(categories)
 
   return (
-    <div>
-      <h1>{name}</h1>
-      <p>{cuisines.join(",")}</p>
-      <p>{areaName}</p>
-      <p>{costForTwoMessage}</p>
-      <p>{avgRating}</p>
-      <p>{feeDetails.message}</p>
+    <div className="text-center">
+      <h1 className="font-bold my-6 text-2xl text-lightBlack">{name}</h1>
+      <p className="font-bold text-lg">{cuisines.join(",")}</p>
+      <p className="font-bold text-lg">{areaName}</p>
+      <p className="font-bold text-lg">{costForTwoMessage}</p>
+      <p className="font-bold text-lg">{avgRating}</p>
+      <p className="font-bold text-lg">{feeDetails.message}</p>
       <h2>Menu</h2>
       {/* <h4>{itemCards[0].card.info.category}</h4>
       <ul>
