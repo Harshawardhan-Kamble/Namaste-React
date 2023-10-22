@@ -17,7 +17,7 @@
 .nav-items>ul {
     display: flex;
     list-style-type: none;
-    font-size: 25px;
+    font-size: 20px;
     margin-top: 10px;
     gap: 25px;
     align-items: center;
@@ -51,16 +51,19 @@
 .res-card {
     border-radius: 5px;
     width: 180px;
-    padding: 10px;
-    margin-bottom: 18px;
+  margin: 10px;
+  padding: 10px;
     background-color: #f0f0f0;
+   
+}
+.res-card p{
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
-
 .res-card:hover {
-    border: 1px solid #000;
+    padding: 2px;
+    border: 2px solid lightgreen;
     cursor: pointer;
 }
 
@@ -82,9 +85,11 @@
 }
 
 .filter-btn {
-    height: 26px;
-    margin-top: 21px;
-    padding: 5px;
+   background-color: #90ee90;
+  height: 32px;
+  margin-top: 21px;
+  padding: 4px;
+  border-radius: 8px;
 }
 
 
@@ -110,22 +115,29 @@
 .log-btn {
     cursor: pointer;
     border-radius: 12px;
-    /* height: 35px; */
-    margin-top: -7px;
-    padding: 5px;
-    width: 57px;
-}
 
+    background-color: #90ee90;
+    margin-top: -7px;
+    padding: 2px;
+}
+.log-btn:active{
+        background-color: red;
+   
+}
 .search-input {
     border-radius: 5px;
     /* margin: 3px; */
     padding: 4px;
     width: 23vw;
+    border: 2px solid lightslategray;
+
 }
 
 .search-button {
     margin-left: 14px;
     padding: 4px;
+    background-color: lightgreen;
+  border-radius: 10px;
 }
 
 ul a {
@@ -134,7 +146,5 @@ ul a {
 }
 
 /* a:hover {
-    padding: 2px;
-    border: 1px solid orange;
-lat=18.5204303&lng=73.8567437
+    border: 1px solid lightgreen;
 } */
