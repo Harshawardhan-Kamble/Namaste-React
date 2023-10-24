@@ -21,7 +21,7 @@ const ItemList = ({ items }) => {
           {item?.card?.info?.imageId ? (
             <div className="w-3/12 p-4">
             <div className="absolute ">
-            <button className="pl-4 pr-4  mx-8 my-14 rounded-sm bg-white  shadow-lg  text-green-500 font-semibold w-16">Add</button>
+            <button className="pl-4 pr-4  mx-7 my-14 rounded-sm bg-white  shadow-lg  text-green-500 font-semibold w-16">Add</button>
           </div>
               <img
                 src={CDN_IMAGE + item?.card?.info?.imageId}
