@@ -39,7 +39,7 @@ const RestMenu = () => {
       <div className=" flex justify-center items-center ">
         <div className="w-full flex justify-between max-w-screen-sm my-8">
           <div>
-            <p className="font-bold my-2 text-lg  text-lightBlack">{name}</p>
+            <p className="font-bold my-6 text-lg  text-lightBlack">{name}</p>
             <p className=" text-sm text-gray-500">{cuisines.join(",")}</p>
             <p className=" text-sm  text-gray-500">{areaName}</p>
             {/* <img
@@ -47,10 +47,10 @@ const RestMenu = () => {
               src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_18,h_18/v1648635511/Delivery_fee_new_cjxumu"
             /> */}
             <p className="text-sm  text-gray-500 my-3">{feeDetails.message}</p>
-            <span className="font-bold  text-2lg text-lightBlack">
+            <span className="font-bold  text-md  text-gray-700">
               {sla.deliveryTime}MINS
             </span>
-            <span className="font-bold  text-2lg  text-lightBlack m-5">
+            <span className="font-bold  text-md  text-gray-700 m-5">
               {costForTwoMessage}
             </span>
           </div>
@@ -65,7 +65,7 @@ const RestMenu = () => {
         ))}
       </ul> */}
           {/* <ul> */}
-          <div className="border-2 h-16 my-6">
+          <div className="border-2 h-16 my-6 ">
             <p className="font-bold  text-lg text-green-500">
               &#9733; {avgRating}
             </p>
