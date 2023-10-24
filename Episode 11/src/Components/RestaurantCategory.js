@@ -15,7 +15,7 @@ const RestaurantCategory = ({ data }) => {
           </span>
           <span>&darr;</span>
         </div>{
-        {setToggle}?<ItemList items={data.itemCards} />:null}
+        toggle?<ItemList items={data.itemCards} />:null}
       </div>
     </div>
   );

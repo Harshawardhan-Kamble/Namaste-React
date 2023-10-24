@@ -79,7 +79,7 @@ const RestMenu = () => {
           // <li key={index}>
           //   <h4>{category?.card?.card?.title}</h4>
           //   {category?.card?.card?.itemCards.map((item,index)=>(<p key={index}>{item?.card?.info?.name}</p>))}
-          <RestaurantCategory data={category?.card?.card} />
+          <RestaurantCategory key={index} data={category?.card?.card} />
           //   </li>
         ))}
         {/* // </ul> */}
