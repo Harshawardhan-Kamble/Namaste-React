@@ -36,21 +36,25 @@ const RestMenu = () => {
 
   return (
     <>
-      <div className=" flex justify-center items-center">
-      <div className="w-full flex justify-between max-w-screen-sm">
-        <div >
-          <h1 className="font-bold my-6 text-2xl text-lightBlack">{name}</h1>
-          <p className=" text-sm text-gray-500">{cuisines.join(",")}</p>
-          <p className=" text-sm  text-gray-500">{areaName}</p>
-          <p className="text-sm  text-gray-500 m-3">{feeDetails.message}</p>
-          <span className="font-bold my-6 text-2lg text-lightBlack">
-            {sla.deliveryTime}MINS
-          </span>
-          <span className="font-bold my-6 text-2lg text-lightBlack m-5">
-            {costForTwoMessage}
-          </span>
-        </div>
-        {/* <h4>{itemCards[0].card.info.category}</h4>
+      <div className=" flex justify-center items-center ">
+        <div className="w-full flex justify-between max-w-screen-sm my-8">
+          <div>
+            <p className="font-bold my-2 text-lg  text-lightBlack">{name}</p>
+            <p className=" text-sm text-gray-500">{cuisines.join(",")}</p>
+            <p className=" text-sm  text-gray-500">{areaName}</p>
+            {/* <img
+              className="mt-2"
+              src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_18,h_18/v1648635511/Delivery_fee_new_cjxumu"
+            /> */}
+            <p className="text-sm  text-gray-500 my-3">{feeDetails.message}</p>
+            <span className="font-bold  text-2lg text-lightBlack">
+              {sla.deliveryTime}MINS
+            </span>
+            <span className="font-bold  text-2lg  text-lightBlack m-5">
+              {costForTwoMessage}
+            </span>
+          </div>
+          {/* <h4>{itemCards[0].card.info.category}</h4>
       <ul>
         {itemCards.map((item, index) => (
           <li key={index}>
@@ -60,14 +64,15 @@ const RestMenu = () => {
           </li>
         ))}
       </ul> */}
-        {/* <ul> */}
-        <div >
-          <p className="font-bold  text-lg text-green-500">
-            &#9733; {avgRating}
-          </p>
-          <p className="text-gray-400">{totalRatingsString}</p>
+          {/* <ul> */}
+          <div className="border-2 h-16 my-6">
+            <p className="font-bold  text-lg text-green-500">
+              &#9733; {avgRating}
+            </p>
+            <hr></hr>
+            <p className="text-gray-400 font-semibold">{totalRatingsString}</p>
+          </div>
         </div>
-      </div>
       </div>
       <div>
         {categories.map((category, index) => (
