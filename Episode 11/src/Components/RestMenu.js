@@ -67,7 +67,7 @@ const RestMenu = () => {
           {/* <ul> */}
           <div className="border-2 h-16 my-6 ">
             <p className="font-bold  text-lg text-green-500">
-              &#9733; {avgRating}
+             &#9733; {avgRating}
             </p>
             <hr></hr>
             <p className="text-gray-400 font-semibold">{totalRatingsString}</p>
@@ -79,7 +79,7 @@ const RestMenu = () => {
           // <li key={index}>
           //   <h4>{category?.card?.card?.title}</h4>
           //   {category?.card?.card?.itemCards.map((item,index)=>(<p key={index}>{item?.card?.info?.name}</p>))}
-          <RestaurantCategory key={index} data={category?.card?.card} />
+          <RestaurantCategory key={index} data={category?.card?.card} showItems={false} />
           //   </li>
         ))}
         {/* // </ul> */}
