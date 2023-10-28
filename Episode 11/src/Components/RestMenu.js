@@ -1,8 +1,10 @@
+import { useState } from "react";
 import useRestaurantMenu from "../utils/useRestuarantMenu";
 import RestaurantCategory from "./RestaurantCategory";
 import Shimmer from "./Shimmer";
 import { useParams } from "react-router-dom";
 const RestMenu = () => {
+  const [showIndex, setShowIndex] = useState(0);
   const { id } = useParams();
   // Used useRestaurantMenu custom hook
   const resInfo = useRestaurantMenu(id);
@@ -32,7 +34,7 @@ const RestMenu = () => {
         category?.card?.card?.["@type"] ===
         "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
     );
-  console.log(categories);
+  console.log(categories.length);
 
   return (
     <>
@@ -67,7 +69,7 @@ const RestMenu = () => {
           {/* <ul> */}
           <div className="border-2 h-16 my-6 ">
             <p className="font-bold  text-lg text-green-500">
-             &#9733; {avgRating}
+              &#9733; {avgRating}
             </p>
             <hr></hr>
             <p className="text-gray-400 font-semibold">{totalRatingsString}</p>
@@ -79,7 +81,14 @@ const RestMenu = () => {
           // <li key={index}>
           //   <h4>{category?.card?.card?.title}</h4>
           //   {category?.card?.card?.itemCards.map((item,index)=>(<p key={index}>{item?.card?.info?.name}</p>))}
-          <RestaurantCategory key={index} data={category?.card?.card} showItems={false} />
+          <RestaurantCategory
+            key={index}
+            data={category?.card?.card}
+            // showItems={index === showIndex ? true : false}
+            // show={()=>setShowIndex(index)}
+            showItems={showIndex===index}
+            show={()=>setShowIndex(index)}
+          />
           //   </li>
         ))}
         {/* // </ul> */}

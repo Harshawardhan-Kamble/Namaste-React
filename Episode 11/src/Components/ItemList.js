@@ -1,6 +1,6 @@
 import { CDN_IMAGE } from "../utils/constant";
 const ItemList = ({ items }) => {
-  console.log(items);
+  // console.log(items);
   return (
     <div>
       {items.map((item) => (
@@ -15,7 +15,7 @@ const ItemList = ({ items }) => {
               {Math.round(item.card.info.price / 100) ||
                 item.card.info.defaultPrice / 100}
             </p>
-            <p>{item?.card?.info?.description}</p>
+            <p className=" text-gray-400 text-sm mt-2 mb-2">{item?.card?.info?.description}</p>
           </div>
           
           {item?.card?.info?.imageId ? (
