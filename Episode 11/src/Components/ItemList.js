@@ -15,14 +15,18 @@ const ItemList = ({ items }) => {
               {Math.round(item.card.info.price / 100) ||
                 item.card.info.defaultPrice / 100}
             </p>
-            <p className=" text-gray-400 text-sm mt-2 mb-2">{item?.card?.info?.description}</p>
+            <p className=" text-gray-400 text-sm mt-2 mb-2">
+              {item?.card?.info?.description}
+            </p>
           </div>
-          
+              <div className="relative">
+                <button className="absolute left-10 top-5 right-50 pl-4 pr-4 my-14 rounded-sm bg-white  shadow-lg  text-green-500 font-semibold w-16">
+                  Add
+                </button>
+              </div>
+
           {item?.card?.info?.imageId ? (
             <div className="w-3/12 p-4">
-            <div className="absolute ">
-            <button className="pl-4 pr-4  mx-7 my-14 rounded-sm bg-white  shadow-lg  text-green-500 font-semibold w-16">Add</button>
-          </div>
               <img
                 src={CDN_IMAGE + item?.card?.info?.imageId}
                 className="w-full"
