@@ -9,7 +9,7 @@ const RestaurantCategory = ({ data ,showItems,show}) => {
           </span>
           <span>&darr;</span>
         </div>{
-        showItems&&<ItemList items={data.itemCards} />}
+        showItems&&<ItemList items={data.itemCards}/>}
       </div>
     </div>
   );

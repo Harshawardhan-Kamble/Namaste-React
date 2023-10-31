@@ -1,5 +1,5 @@
 import { CDN_IMAGE } from "../utils/constant";
-const ItemList = ({ items }) => {
+const ItemList = ({ items}) => {
   // console.log(items);
   return (
     <div>
@@ -24,7 +24,6 @@ const ItemList = ({ items }) => {
                   Add
                 </button>
               </div>
-
           {item?.card?.info?.imageId ? (
             <div className="w-3/12 p-4">
               <img
@@ -33,6 +32,7 @@ const ItemList = ({ items }) => {
               />
             </div>
           ) : null}
+
           {/* <div className="w-3/12 p-4"><img src={CDN_IMAGE+item?.card?.info?.imageId} className="w-full"/></div> */}
         </div>
       ))}
