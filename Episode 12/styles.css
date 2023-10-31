@@ -1,0 +1,149 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+    padding: 0 10px;
+}
+
+.nav-items>ul {
+    display: flex;
+    list-style-type: none;
+    font-size: 20px;
+    margin-top: 10px;
+    gap: 25px;
+    align-items: center;
+}
+
+.logo {
+    width: 10vw;
+}
+
+/* .nav-items {
+    padding: 0px 20px;
+} */
+
+.nav-items>ul>li {
+    margin-top: 1vw;
+}
+
+.res-container {
+    /* height: 100vh; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.res-container a {
+    text-decoration: none;
+    color: #000
+}
+
+.res-card {
+    border-radius: 5px;
+    width: 180px;
+  margin: 10px;
+  padding: 10px;
+    background-color: #f0f0f0;
+   
+}
+.res-card p{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.res-card:hover {
+    padding: 2px;
+    border: 2px solid lightgreen;
+    cursor: pointer;
+}
+
+.search {
+    padding: 10px;
+    margin: 10px;
+}
+
+.res-logo {
+    width: 170px;
+    height: 130px;
+    margin-left: 5px;
+}
+
+
+.filter {
+    margin: 10px;
+    display: flex;
+}
+
+.filter-btn {
+   background-color: #90ee90;
+  height: 32px;
+  margin-top: 21px;
+  padding: 4px;
+  border-radius: 8px;
+}
+
+
+.footer {
+    border: 1px solid black;
+    text-align: center;
+    padding: 10px;
+}
+
+.shimmer-Container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.shimmer-card {
+    background-color: #f0f0f0;
+    width: 150px;
+    height: 180px;
+    margin: 20px
+}
+
+.log-btn {
+    cursor: pointer;
+    border-radius: 12px;
+
+    background-color: #90ee90;
+    margin-top: -7px;
+    padding: 2px;
+}
+/* .log-btn:active{
+        background-color: red;
+   
+} */
+.search-input {
+    border-radius: 5px;
+    /* margin: 3px; */
+    padding: 4px;
+    width: 23vw;
+    border: 2px solid lightslategray;
+
+}
+
+.search-button {
+    margin-left: 14px;
+    padding: 4px;
+    background-color: lightgreen;
+  border-radius: 10px;
+}
+
+ul a {
+    text-decoration: none;
+    color: black
+}
+
+/* a:hover {
+    border: 1px solid lightgreen;
+} */
