@@ -9,6 +9,7 @@ const Header = () => {
     setLog(log === "Login" ? "Logout" : "Login");
   };
   const onlineStatus = useOnlineStatus();
+  // Subscribing to store
   const cartItems=useSelector((store)=>store.cart.items)
   return (
     <div className="header ">
