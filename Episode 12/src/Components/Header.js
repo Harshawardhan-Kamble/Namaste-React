@@ -2,13 +2,14 @@ import logo from "../../assets/logo.png";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import { useSelector } from "react-redux";
 const Header = () => {
   const [log, setLog] = useState("Login");
   const toggleLog = () => {
     setLog(log === "Login" ? "Logout" : "Login");
   };
   const onlineStatus = useOnlineStatus();
-
+  const cartItems=useSelector((store)=>store.cart.items)
   return (
     <div className="header ">
       <div className="logo-container">
@@ -26,7 +27,7 @@ const Header = () => {
           <li>
             <Link to="/contactus">Contact us</Link>
           </li>
-          <li>Cart</li>
+          <li>Cart- {cartItems.length}</li>
           <li>
             <button className="log-btn" onClick={toggleLog}>
               {log}

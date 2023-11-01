@@ -19,7 +19,6 @@ const RestMenu = () => {
     sla,
     totalRatingsString,
   } = resInfo?.cards[0]?.card?.card?.info;
-  console.log(resInfo);
   // console.log(
   //   resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards
   // );
@@ -34,8 +33,6 @@ const RestMenu = () => {
         category?.card?.card?.["@type"] ===
         "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
     );
-  console.log(categories.length);
-
   return (
     <>
       <div className=" flex justify-center items-center ">
@@ -67,8 +64,8 @@ const RestMenu = () => {
         ))}
       </ul> */}
           {/* <ul> */}
-          <div className="border-2 h-16 my-6 ">
-            <p className="font-bold  text-lg text-green-500">
+          <div className="border-2 border-gray-200 h-16 my-6 rounded-lg">
+            <p className="font-bold text-center text-lg text-green-500">
               &#9733; {avgRating}
             </p>
             <hr></hr>

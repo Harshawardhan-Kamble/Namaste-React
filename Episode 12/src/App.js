@@ -8,13 +8,15 @@ import About from "./Components/About";
 import Error from "./Components/Error";
 import ContactUs from "./Components/ContactUs";
 import RestMenu from "./Components/RestMenu";
+import { Provider } from "react-redux";
+import appStore from "./utils/redux/appStore";
 const App = () => {
   return (
-    <React.Fragment>
+    <Provider store={appStore}>
       <Header />
       <Outlet />
       <Footer />
-    </React.Fragment>
+    </Provider>
   );
 };
 const appRouter = createBrowserRouter([
