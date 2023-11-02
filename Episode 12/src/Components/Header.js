@@ -11,6 +11,7 @@ const Header = () => {
   const onlineStatus = useOnlineStatus();
   // Subscribing to store
   const cartItems=useSelector((store)=>store.cart.items)
+  console.log(cartItems)
   return (
     <div className="header ">
       <div className="logo-container">
@@ -28,7 +29,7 @@ const Header = () => {
           <li>
             <Link to="/contactus">Contact us</Link>
           </li>
-          <li>Cart- {cartItems.length}</li>
+         <Link to="/cart"> <li>Cart- {cartItems.length}</li></Link>
           <li>
             <button className="log-btn" onClick={toggleLog}>
               {log}

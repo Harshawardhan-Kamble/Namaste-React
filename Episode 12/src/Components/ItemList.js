@@ -4,8 +4,8 @@ import { addItem } from "../utils/redux/cartSlice";
 const ItemList = ({ items}) => {
   // console.log(items);
   const dispatch=useDispatch()
-  const handleAddItem=()=>{
-    dispatch(addItem("pizza"))
+  const handleAddItem=(item)=>{
+    dispatch(addItem(item))
   }
   return (
     <div>
@@ -26,7 +26,7 @@ const ItemList = ({ items}) => {
             </p>
           </div>
               <div className="relative">
-                <button onClick={handleAddItem} className="absolute left-10 top-5 right-50 pl-4 pr-4 my-14 rounded-sm bg-white  shadow-lg  text-green-500 font-semibold w-16">
+                <button onClick={()=>handleAddItem(item)} className="absolute left-10 top-5 right-50 pl-4 pr-4 my-14 rounded-sm bg-white  shadow-lg  text-green-500 font-semibold w-16">
                   Add
                 </button>
               </div>
